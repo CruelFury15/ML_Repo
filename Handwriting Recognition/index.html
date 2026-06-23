@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Handwriting Recognition Report</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      margin: 2rem auto;
+      max-width: 960px;
+      padding: 0 1rem;
+    }
+    img {
+      border: 1px solid #ddd;
+      display: block;
+      height: auto;
+      margin: 1rem 0 2rem;
+      max-width: 100%;
+    }
+    table {
+      border-collapse: collapse;
+      margin: 1rem 0 2rem;
+      width: 100%;
+    }
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    th {
+      background: #f3f4f6;
+    }
+    pre {
+      background: #f8fafc;
+      overflow-x: auto;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Handwriting Recognition Report</h1>
+  <p>Data shape: (1797, 64). Target shape: (1797,).</p>
+  <h2>Dataset Description</h2>
+  <pre>.. _digits_dataset:
+
+Optical recognition of handwritten digits dataset
+--------------------------------------------------
+
+**Data Set Characteristics:**
+
+:Number of Instances: 1797
+:Number of Attributes: 64
+:Attribute Information: 8x8 image of integer pixels in the range 0..16.
+:Missing Attribute Values: None
+:Creator: E. Alpaydin (alpaydin '@' boun.edu.tr)
+:Date: July; 1998
+
+This is a copy of the test set of the UCI ML hand-written digits datasets
+https://archive.ics.uci.edu/ml/datasets/Optical</pre>
+  <h2>Sample Digit</h2>
+  <img src="outputs/sample_digit.png" alt="Sample handwritten digit">
+  <h2>First 64 Digits</h2>
+  <img src="outputs/digits_overview.png" alt="First 64 handwritten digit samples">
+  <h2>Cluster Mapping</h2>
+  <table>
+    <thead><tr><th>Cluster</th><th>Interpreted Digit</th></tr></thead>
+    <tbody>
+      <tr><td>0</td><td>2</td></tr>
+<tr><td>1</td><td>0</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>8</td></tr>
+<tr><td>4</td><td>7</td></tr>
+<tr><td>5</td><td>6</td></tr>
+<tr><td>6</td><td>3</td></tr>
+<tr><td>7</td><td>5</td></tr>
+<tr><td>8</td><td>9</td></tr>
+<tr><td>9</td><td>4</td></tr>
+    </tbody>
+  </table>
+  <h2>Cluster Centers</h2>
+  <img src="outputs/cluster_centers.png" alt="KMeans cluster centers">
+  <h2>Prediction</h2>
+  <p>Predicted cluster labels: [4, 7, 7, 2]</p>
+  <p>Predicted digits: 7551</p>
+</body>
+</html>
