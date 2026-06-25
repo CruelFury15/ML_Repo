@@ -1,6 +1,6 @@
-# Machine Learning Projects Collection
+﻿# Machine Learning Projects Collection
 
-A hands-on collection of ML projects, Jupyter notebooks, and datasets covering supervised and unsupervised learning algorithms, dimensionality reduction, feature selection, and exploratory data analysis. Built as a learning archive and growing portfolio.
+A hands-on collection of ML projects, Jupyter notebooks, and datasets covering supervised and unsupervised learning, dimensionality reduction, feature selection, ensemble methods, and exploratory data analysis. This repository is maintained as a learning archive and growing portfolio.
 
 ---
 
@@ -8,17 +8,24 @@ A hands-on collection of ML projects, Jupyter notebooks, and datasets covering s
 
 - [Repository Structure](#repository-structure)
 - [Projects](#projects)
-  - [Linear Regression](#linear-regression)
-  - [Logistic Regression](#logistic-regression)
-  - [K-Nearest Neighbours](#k-nearest-neighbours)
-  - [K-Means Clustering](#k-means-clustering)
-  - [Decision Trees](#decision-trees)
-  - [Hyperparameter Tuning](#hyperparameter-tuning)
-  - [Principal Component Analysis (PCA)](#principal-component-analysis-pca)
-  - [Regularisation](#regularisation)
-  - [Wrapper Methods (Feature Selection)](#wrapper-methods-feature-selection)
-  - [Handwriting Recognition](#handwriting-recognition)
-  - [Exploratory Data Analysis — GDP & Life Expectancy](#exploratory-data-analysis--gdp--life-expectancy)
+  - [Algorithms](#algorithms)
+    - [Linear Regression](#linear-regression)
+    - [Logistic Regression](#logistic-regression)
+    - [K-Nearest Neighbours](#k-nearest-neighbours)
+    - [K-Means Clustering](#k-means-clustering)
+    - [Decision Trees](#decision-trees)
+    - [Naive Bayes Classifier](#naive-bayes-classifier)
+    - [Support Vector Machines (SVM)](#support-vector-machines-svm)
+  - [Additional Topics](#additional-topics)
+    - [Ensembling Methods](#ensembling-methods)
+    - [Hyperparameter Tuning](#hyperparameter-tuning)
+    - [Principal Component Analysis (PCA)](#principal-component-analysis-pca)
+    - [Perceptron](#perceptron)
+    - [Regularisation](#regularisation)
+    - [Wrapper Methods (Feature Selection)](#wrapper-methods-feature-selection)
+    - [Handwriting Recognition](#handwriting-recognition)
+    - [Recommender System](#recommender-system)
+    - [Exploratory Data Analysis — GDP & Life Expectancy](#exploratory-data-analysis--gdp--life-expectancy)
 - [Getting Started](#getting-started)
 - [Dependencies](#dependencies)
 - [Notes](#notes)
@@ -30,56 +37,106 @@ A hands-on collection of ML projects, Jupyter notebooks, and datasets covering s
 
 ```
 ML_Repo/
-├── Algorithms/                        # Core algorithm implementations (notebooks + datasets)
+├── Algorithms/
+│   ├── DecisionTrees/
+│   │   ├── Find_the_flag/
+│   │   │   └── flag.ipynb
+│   │   └── decision.ipynb
+│   ├── K-Means Clustering/
+│   │   ├── kmeans_manual.ipynb
+│   │   └── kmeans_scikit.ipynb
+│   ├── K-NearestNeighbour/
+│   │   ├── Cancer_Classifier/
+│   │   │   └── classifier.ipynb
+│   │   ├── movies.py
+│   │   ├── movies.ipynb
+│   │   ├── movies_classifier.ipynb
+│   │   └── movies_regressor.ipynb
 │   ├── LinearRegression/
 │   │   ├── AgevBP/
+│   │   │   └── BPvAge.ipynb
 │   │   ├── HeartDisesase/
+│   │   │   └── HeartAttack_Model.ipynb
 │   │   ├── HoneyProduction/
+│   │   │   ├── honey.ipynb
+│   │   │   └── honeyproduction.csv
 │   │   ├── StreetEasy_MLR/
+│   │   │   ├── streeteasy.ipynb
+│   │   │   └── streeteasy.csv
 │   │   ├── TennisAce_MLR/
+│   │   │   ├── TennisAce.ipynb
+│   │   │   └── tennis_stats.csv
 │   │   ├── Linear_linregress.ipynb
 │   │   ├── Linear_manula.ipynb
 │   │   └── Linear_scikit.ipynb
 │   ├── LogisticRegression/
 │   │   ├── census+income/
+│   │   │   ├── adult.data
+│   │   │   ├── adult.names
+│   │   │   ├── adult.test
+│   │   │   └── census.ipynb
 │   │   ├── CreditCardFraud/
+│   │   │   ├── detection.ipynb
+│   │   │   └── transactions_modified.csv
 │   │   ├── Logistic_Regression_1/
+│   │   │   ├── codecademyU.csv
+│   │   │   ├── codecademyU_2.csv
+│   │   │   └── logistic_scikit.ipynb
 │   │   └── Logistic_Regression_2/
-│   ├── K-NearestNeighbour/
-│   │   ├── Cancer_Classifier/
-│   │   ├── movies.py
-│   │   ├── movies.ipynb
-│   │   ├── movies_classifier.ipynb
-│   │   └── movies_regressor.ipynb
-│   ├── K-Means Clustering/
-│   │   ├── kmeans_manual.ipynb
-│   │   └── kmeans_scikit.ipynb
-│   └── DecisionTrees/
-│       ├── Find_the_flag/
-│       │   └── flag.ipynb
-│       └── decision.ipynb                
-├── EDA_GDP/                           # Exploratory Data Analysis project
+│   │       ├── breast_cancer_data.csv
+│   │       └── data.ipynb
+│   ├── Naive Bayes Classifier/
+│   │   ├── bayes.ipynb
+│   │   └── Email Similarity/
+│   │       └── email.ipynb
+│   └── SVM/
+│       ├── graph.py
+│   │       ├── svm.ipynb
+│   │       └── svm_scikit.ipynb
+├── EDA_GDP/
 │   ├── all_data.csv
 │   └── life_expectancy_gdp.ipynb
-├── Handwriting Recognition/           # End-to-end digit recognition app (Python + Web UI)
-│   ├── script.py
+├── Ensembling Methods/
+│   ├── boosting.ipynb
+│   ├── ensemble_rforest.ipynb
+│   ├── rforest_scikit.ipynb
+│   └── Random_forest_Project/
+│       ├── adult.data
+│   │       └── adult.ipynb
+├── Handwriting Recognition/
 │   ├── index.html
 │   ├── JsCode.js
+│   ├── requirements.txt
+│   ├── script.py
+│   ├── test.html
 │   └── outputs/
 ├── HyperParameter Tuning/
 │   ├── tuning.ipynb
 │   └── Raisins_Classify/
+│       ├── Raisin_Dataset.csv
 │       └── notebook.ipynb
 ├── PCA/
 │   ├── pca.ipynb
 │   └── Telescope/
+│       ├── classes.csv
+│       ├── data_matrix.csv
+│       ├── telescope_data.csv
 │       ├── telescope1.ipynb
 │       └── telescope2.ipynb
+├── Perceptron/
+│   ├── gates.ipynb
+│   └── perceptron.ipynb
+├── Recommender System/
+│   ├── goodreads_ratings.csv
+│   └── recommender.ipynb
 ├── Regularisation/
-│   └── regularisation.ipynb
+│   ├── regularisation.ipynb
+│   └── students_maths.csv
 └── WrapperMethod/
+    ├── dataR2.csv
     ├── wrapper.ipynb
     └── eating_habit/
+        ├── obesity.csv
         └── wrapper_method_solution.ipynb
 ```
 
@@ -87,164 +144,165 @@ ML_Repo/
 
 ## Projects
 
-### Linear Regression
+### Algorithms
+
+#### Linear Regression
 
 | Project | Description |
 |---|---|
-| `Linear_linregress.ipynb` | Simple linear regression using `scipy.stats.linregress` — covers slope, intercept, R², and t-statistics |
-| `Linear_manula.ipynb` | Manual gradient descent — builds `step_gradient` and `gradient_descent` from first principles |
-| `Linear_scikit.ipynb` | Scikit-learn `LinearRegression` on a temperature vs. ice cream sales toy dataset |
-| `AgevBP/BPvAge.ipynb` | Predicts blood pressure from age using simulated data (n=200); includes hypothesis testing and user input prediction |
-| `HoneyProduction/honey.ipynb` | Forecasts US honey production trends; aggregates yearly totals and projects 40 years into the future |
-| `HeartDisesase/HeartAttack_Model.ipynb` | Cleveland heart disease dataset — EDA, feature correlation, Logistic Regression and Random Forest comparison, ROC-AUC evaluation, and risk prediction for new patients |
-| `StreetEasy_MLR/streeteasy.ipynb` | Multiple linear regression on NYC rental listings (StreetEasy data) to predict rent |
-| `TennisAce_MLR/TennisAce.ipynb` | Multiple linear regression on ATP tennis stats; explores single and two-feature models predicting winnings and wins |
+| `Algorithms/LinearRegression/Linear_linregress.ipynb` | Simple linear regression using `scipy.stats.linregress` — covers slope, intercept, R², and t-statistics |
+| `Algorithms/LinearRegression/Linear_manula.ipynb` | Manual gradient descent explanation and implementation from first principles |
+| `Algorithms/LinearRegression/Linear_scikit.ipynb` | Scikit-learn `LinearRegression` on a toy dataset |
+| `Algorithms/LinearRegression/AgevBP/BPvAge.ipynb` | Predicts blood pressure from age using synthetic data |
+| `Algorithms/LinearRegression/HoneyProduction/honey.ipynb` | Forecasts US honey production trends with time series aggregation |
+| `Algorithms/LinearRegression/HeartDisesase/HeartAttack_Model.ipynb` | Heart disease risk modelling with EDA and classifier comparison |
+| `Algorithms/LinearRegression/StreetEasy_MLR/streeteasy.ipynb` | Multiple linear regression on NYC rental listings |
+| `Algorithms/LinearRegression/TennisAce_MLR/TennisAce.ipynb` | Tennis performance regression and model comparison |
 
----
-
-### Logistic Regression
+#### Logistic Regression
 
 | Project | Description |
 |---|---|
-| `Logistic_Regression_1/logistic_scikit.ipynb` | Intro to logistic regression — models exam pass probability from study hours; extends to a multi-feature student dataset with scaling, accuracy, precision, and recall |
-| `Logistic_Regression_2/data.ipynb` | Breast cancer malignancy classification (Wisconsin dataset); includes outlier removal, train/test split, threshold tuning, and ROC curve analysis |
-| `census+income/census.ipynb` | Predicts whether income exceeds \$50K using UCI Adult Census data; features L1-regularised logistic regression, one-hot encoding, feature scaling, confusion matrix, and AUC scoring |
-| `CreditCardFraud/detection.ipynb` | Fraud detection on transaction data; engineers features (payment type, account difference), fits logistic regression, and classifies new transactions |
+| `Algorithms/LogisticRegression/Logistic_Regression_1/logistic_scikit.ipynb` | Logistic regression examples, scaling, and classification metrics |
+| `Algorithms/LogisticRegression/Logistic_Regression_2/data.ipynb` | Breast cancer malignancy classification and ROC analysis |
+| `Algorithms/LogisticRegression/census+income/census.ipynb` | UCI Adult dataset income prediction with feature engineering |
+| `Algorithms/LogisticRegression/CreditCardFraud/detection.ipynb` | Fraud classification on transaction data |
 
----
-
-### K-Nearest Neighbours
+#### K-Nearest Neighbours
 
 | Project | Description |
 |---|---|
-| `movies.py` | Shared data module — provides `movie_dataset`, `movie_labels`, `movie_ratings`, and `normalize_point` |
-| `movies.ipynb` | KNN classification from scratch — implements Euclidean distance, a `classify` function, and `find_validation_accuracy`; also demonstrates `KNeighborsClassifier` |
-| `movies_classifier.ipynb` | KNN movie classifier — predicts whether a movie has a high audience score; includes validation accuracy sweep over multiple k values |
-| `movies_regressor.ipynb` | KNN movie regressor — predicts a continuous audience rating using weighted KNN |
-| `Cancer_Classifier/classifier.ipynb` | KNN breast cancer classifier using sklearn's built-in dataset; sweeps k from 1–100, plots accuracy vs. k, and identifies the optimal k |
+| `K-NearestNeighbour/movies_manual.ipynb` | KNN from scratch with distance functions and validation accuracy |
+| `Algorithms/K-NearestNeighbour/movies.ipynb` | Movie dataset KNN examples and helper dataset utilities |
+| `Algorithms/K-NearestNeighbour/movies_classifier.ipynb` | KNN classification of movie audience score |
+| `Algorithms/K-NearestNeighbour/movies_regressor.ipynb` | KNN regression for continuous movie rating prediction |
+| `Algorithms/K-NearestNeighbour/Cancer_Classifier/classifier.ipynb` | Breast cancer KNN classification and k-tuning analysis |
 
----
-
-### K-Means Clustering
+#### K-Means Clustering
 
 | Project | Description |
 |---|---|
-| `kmeans_manual.ipynb` | K-Means clustering implemented from scratch — covers centroid initialisation, assignment, and update steps |
-| `kmeans_scikit.ipynb` | K-Means using scikit-learn `KMeans`; explores cluster count selection and inertia/elbow method |
+| `Algorithms/K-Means Clustering/kmeans_manual.ipynb` | K-Means clustering implemented from scratch |
+| `Algorithms/K-Means Clustering/kmeans_scikit.ipynb` | Scikit-learn KMeans clustering and elbow-method analysis |
 
----
-
-### Decision Trees
+#### Decision Trees
 
 | Project | Description |
 |---|---|
-| `decision.ipynb` | Decision tree classifier on the UCI Car Evaluation dataset; one-hot encodes categorical features, visualises the fitted tree, and manually computes Gini impurity and Information Gain per feature |
-| `Find_the_flag/flag.ipynb` | Classifies country flags (Europe vs. Oceania) using the UCI Flags dataset; tunes `max_depth` and `ccp_alpha` (cost-complexity pruning) with accuracy plots, and visualises the final pruned tree |
+| `Algorithms/DecisionTrees/decision.ipynb` | Decision tree classifier on a categorical dataset |
+| `Algorithms/DecisionTrees/Find_the_flag/flag.ipynb` | Flag classification with tree pruning and visualisation |
 
----
-
-### Hyperparameter Tuning
+#### Naive Bayes Classifier
 
 | Project | Description |
 |---|---|
-| `tuning.ipynb` | Intro to hyperparameter tuning concepts — grid search, random search, and cross-validation strategies |
-| `Raisins_Classify/notebook.ipynb` | Raisin variety classification (Besni vs. Kecimen) using the Raisin Dataset; applies GridSearchCV and RandomizedSearchCV to optimise classifier performance |
+| `Algorithms/Naive Bayes Classifier/bayes.ipynb` | Naive Bayes classification concepts and examples |
+| `Algorithms/Naive Bayes Classifier/Email Similarity/email.ipynb` | Email similarity classification using naive Bayes techniques |
 
----
-
-### Principal Component Analysis (PCA)
+#### Support Vector Machines (SVM)
 
 | Project | Description |
 |---|---|
-| `pca.ipynb` | Core PCA concepts — variance explained, scree plots, and dimensionality reduction on sample data |
-| `Telescope/telescope1.ipynb` | PCA applied to the MAGIC Gamma Telescope dataset; reduces high-dimensional sensor features and visualises principal components |
-| `Telescope/telescope2.ipynb` | Extends telescope1 — rebuilds a classifier on PCA-reduced features and compares accuracy against the full feature set |
+| `Algorithms/SVM/svm.ipynb` | SVM fundamentals and margin visualisation |
+| `Algorithms/SVM/svm_scikit.ipynb` | Scikit-learn SVC examples with linear, polynomial, and RBF kernels |
 
----
+### Additional Topics
 
-### Regularisation
-
-| Project | Description |
-|---|---|
-| `regularisation.ipynb` | Demonstrates L1 (Lasso) and L2 (Ridge) regularisation on a student maths score dataset; compares coefficients and prediction error across regularisation strengths |
-
----
-
-### Wrapper Methods (Feature Selection)
+#### Ensembling Methods
 
 | Project | Description |
 |---|---|
-| `wrapper.ipynb` | Introduction to wrapper-based feature selection — Sequential Feature Selector (SFS) forward and backward variants |
-| `eating_habit/wrapper_method_solution.ipynb` | Feature selection on an obesity/eating habits dataset; uses SFS to identify the most predictive features for BMI classification |
+| `Ensembling Methods/boosting.ipynb` | Boosting and ensemble learning concepts |
+| `Ensembling Methods/ensemble_rforest.ipynb` | Random forest ensemble exploration |
+| `Ensembling Methods/rforest_scikit.ipynb` | Scikit-learn random forest examples |
+| `Ensembling Methods/Random_forest_Project/adult.ipynb` | Adult income classification with Random Forest |
 
----
-
-### Handwriting Recognition
-
-An end-to-end digit recognition project combining a Python ML backend with a browser-based drawing interface.
-
-| File | Description |
-|---|---|
-| `script.py` | Trains a K-Means clustering model on sklearn's digits dataset; generates output visualisations (`digits_overview.png`, `sample_digit.png`, `cluster_centers.png`) |
-| `index.html` + `JsCode.js` | Web UI — canvas drawing pad that sends user-drawn digits to the model for classification |
-| `test.html` | Standalone test page for the drawing interface |
-| `outputs/` | Pre-generated visualisation outputs from the trained model |
-
----
-
-### Exploratory Data Analysis — GDP & Life Expectancy
+#### Hyperparameter Tuning
 
 | Project | Description |
 |---|---|
-| `EDA_GDP/life_expectancy_gdp.ipynb` | EDA on GDP and life expectancy data across multiple countries and years; includes data cleaning, visualisation, and trend analysis |
+| `HyperParameter Tuning/tuning.ipynb` | Grid search, random search, and cross-validation techniques |
+| `HyperParameter Tuning/Raisins_Classify/notebook.ipynb` | Raisin variety classification with hyperparameter optimisation |
+
+#### Principal Component Analysis (PCA)
+
+| Project | Description |
+|---|---|
+| `PCA/pca.ipynb` | PCA theory and sample data dimensionality reduction |
+| `PCA/Telescope/telescope1.ipynb` | PCA on telescope sensor data |
+| `PCA/Telescope/telescope2.ipynb` | Classifier evaluation on PCA-reduced telescope features |
+
+#### Perceptron
+
+| Project | Description |
+|---|---|
+| `Perceptron/gates.ipynb` | Logic gate implementation with perceptron models |
+| `Perceptron/perceptron.ipynb` | Perceptron learning and decision boundary examples |
+
+#### Regularisation
+
+| Project | Description |
+|---|---|
+| `Regularisation/regularisation.ipynb` | L1 and L2 regularisation demonstration on student maths data |
+
+#### Wrapper Methods (Feature Selection)
+
+| Project | Description |
+|---|---|
+| `WrapperMethod/wrapper.ipynb` | Wrapper-based feature selection introduction |
+| `WrapperMethod/eating_habit/wrapper_method_solution.ipynb` | Feature selection on eating habits and obesity data |
+
+#### Handwriting Recognition
+
+An end-to-end digit recognition project combining Python and a browser drawing interface.
+
+- `Handwriting Recognition/script.py`
+- `Handwriting Recognition/index.html`
+- `Handwriting Recognition/JsCode.js`
+- `Handwriting Recognition/requirements.txt`
+- `Handwriting Recognition/test.html`
+- `Handwriting Recognition/outputs/`
+
+#### Recommender System
+
+| Project | Description |
+|---|---|
+| `Recommender System/recommender.ipynb` | Goodreads rating-based recommender system notebook |
+
+#### Exploratory Data Analysis — GDP & Life Expectancy
+
+| Project | Description |
+|---|---|
+| `EDA_GDP/life_expectancy_gdp.ipynb` | GDP and life expectancy exploratory data analysis |
 
 ---
 
 ## Getting Started
 
-**Prerequisites:** Python 3.8+
-
-```powershell
-# Create and activate a virtual environment
-python -m venv venv
-venv\Scripts\Activate.ps1
-
-# Install dependencies
-pip install numpy pandas matplotlib scikit-learn scipy seaborn jupyter
-```
-
-**Launch notebooks:**
-
-```powershell
-jupyter lab
-```
-
-Open any `.ipynb` file from the Jupyter UI. Notebooks that depend on CSV files expect the data file to be in the same directory as the notebook. Notebooks that load data from UCI URLs require an internet connection.
-
----
+1. Install Python 3.10 or newer.
+2. Create and activate a virtual environment.
+3. Install dependencies for notebook work using `pip install -r "Handwriting Recognition/requirements.txt"` or install packages used by your selected notebook(s).
+4. Launch Jupyter Notebook or JupyterLab from the repository root.
 
 ## Dependencies
 
-| Package | Used for |
-|---|---|
-| `numpy` | Array operations, numerical computing |
-| `pandas` | Data loading and manipulation |
-| `matplotlib` / `seaborn` | Visualisation |
-| `scikit-learn` | Model training, evaluation, preprocessing |
-| `scipy` | Statistical tests (`linregress`, `ttest_1samp`, `binomtest`) |
-| `jupyter` | Running notebooks |
+- Python 3.10+
+- Jupyter Notebook / JupyterLab
+- scikit-learn
+- pandas
+- numpy
+- matplotlib
+- seaborn
+- scipy
 
----
+> Some notebooks may require additional packages; inspect notebook metadata or individual imports.
 
 ## Notes
 
-- Large CSV files (e.g., `transactions_modified.csv`, `adult.data`) are stored locally alongside notebooks. Add them to `.gitignore` or use Git LFS if they exceed GitHub's 100 MB file size limit.
-- `HeartAttack_Model.ipynb` uses both Logistic Regression and Random Forest — it lives under `LinearRegression/` for historical reasons but covers classification.
-- The `Algorithms/` folder mirrors some standalone folders (e.g., `K-NearestNeighbour/`) — both are kept for compatibility with older notebook paths.
-- New algorithm categories (neural networks, ensemble methods, etc.) can be added as top-level folders following the same pattern.
-
----
+- This repository is intended primarily as an educational collection. Code notebooks demonstrate algorithms, dataset exploration, and model evaluation.
+- Folder names and notebook names are preserved from the original project structure.
+- Some datasets are stored alongside notebooks to support local execution.
 
 ## License
 
-Add a `LICENSE` file before publishing publicly. MIT or Apache-2.0 is recommended for open learning portfolios.
+No license is specified for this repository at this time.
