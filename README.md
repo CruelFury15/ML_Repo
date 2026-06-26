@@ -28,6 +28,7 @@ A hands-on collection of ML projects, Jupyter notebooks, and datasets covering s
     - [Exploratory Data Analysis — GDP & Life Expectancy](#exploratory-data-analysis--gdp--life-expectancy)
     - [Pipeline](#pipeline)
     - [Neural Networks](#neural-networks)
+    - [Classification with TensorFlow](#classification-with-tensorflow)
 - [Getting Started](#getting-started)
 - [Dependencies](#dependencies)
 - [Notes](#notes)
@@ -95,6 +96,9 @@ ML_Repo/
 │       ├── graph.py
 │   │       ├── svm.ipynb
 │   │       └── svm_scikit.ipynb
+├── Classification_Tensorflow/
+│   ├── heart.ipynb
+│   └── heart_failure.csv
 ├── EDA_GDP/
 │   ├── all_data.csv
 │   └── life_expectancy_gdp.ipynb
@@ -301,6 +305,12 @@ An end-to-end digit recognition project combining Python and a browser drawing i
 |---|---|
 | `Neural Networks/neural.ipynb` | Neural network fundamentals — architecture, forward pass, activation functions, and training concepts |
 | `Neural Networks/Life_Expectancy/life.ipynb` | Neural network regression on life expectancy data — feature preprocessing, model training, and evaluation |
+
+#### Classification with TensorFlow
+
+| Project | Description |
+|---|---|
+| `Classification_Tensorflow/heart.ipynb` | Binary classification of heart failure outcomes using TensorFlow/Keras — covers data preprocessing, model building, training, and evaluation on clinical data |
 
 ---
 
