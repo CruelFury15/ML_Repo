@@ -1,6 +1,6 @@
 ﻿# Machine Learning Projects Collection
 
-A hands-on collection of ML projects, Jupyter notebooks, and datasets covering supervised and unsupervised learning, dimensionality reduction, feature selection, ensemble methods, and exploratory data analysis. This repository is maintained as a learning archive and growing portfolio.
+A hands-on collection of ML projects, Jupyter notebooks, and datasets covering supervised and unsupervised learning, neural networks, dimensionality reduction, feature selection, ensemble methods, and exploratory data analysis. This repository is maintained as a learning archive and growing portfolio.
 
 ---
 
@@ -26,6 +26,8 @@ A hands-on collection of ML projects, Jupyter notebooks, and datasets covering s
     - [Handwriting Recognition](#handwriting-recognition)
     - [Recommender System](#recommender-system)
     - [Exploratory Data Analysis — GDP & Life Expectancy](#exploratory-data-analysis--gdp--life-expectancy)
+    - [Pipeline](#pipeline)
+    - [Neural Networks](#neural-networks)
 - [Getting Started](#getting-started)
 - [Dependencies](#dependencies)
 - [Notes](#notes)
@@ -100,9 +102,11 @@ ML_Repo/
 │   ├── boosting.ipynb
 │   ├── ensemble_rforest.ipynb
 │   ├── rforest_scikit.ipynb
+│   ├── Boosting/
+│   │   └── census.ipynb
 │   └── Random_forest_Project/
 │       ├── adult.data
-│   │       └── adult.ipynb
+│       └── adult.ipynb
 ├── Handwriting Recognition/
 │   ├── index.html
 │   ├── JsCode.js
@@ -115,6 +119,11 @@ ML_Repo/
 │   └── Raisins_Classify/
 │       ├── Raisin_Dataset.csv
 │       └── notebook.ipynb
+├── Neural Networks/
+│   ├── neural.ipynb
+│   └── Life_Expectancy/
+│       ├── life_expectancy.csv
+│       └── life.ipynb
 ├── PCA/
 │   ├── pca.ipynb
 │   └── Telescope/
@@ -126,6 +135,9 @@ ML_Repo/
 ├── Perceptron/
 │   ├── gates.ipynb
 │   └── perceptron.ipynb
+├── Pipeline/
+│   ├── bone_marrow.ipynb
+│   └── bone-marrow.arff
 ├── Recommender System/
 │   ├── goodreads_ratings.csv
 │   └── recommender.ipynb
@@ -137,7 +149,8 @@ ML_Repo/
     ├── wrapper.ipynb
     └── eating_habit/
         ├── obesity.csv
-        └── wrapper_method_solution.ipynb
+        ├── wrapper_method_solution.ipynb
+        └── wrapper_methods_project_v2/
 ```
 
 ---
@@ -216,6 +229,7 @@ ML_Repo/
 | `Ensembling Methods/ensemble_rforest.ipynb` | Random forest ensemble exploration |
 | `Ensembling Methods/rforest_scikit.ipynb` | Scikit-learn random forest examples |
 | `Ensembling Methods/Random_forest_Project/adult.ipynb` | Adult income classification with Random Forest |
+| `Ensembling Methods/Boosting/census.ipynb` | Boosting applied to the UCI Adult census dataset for income classification |
 
 #### Hyperparameter Tuning
 
@@ -274,6 +288,19 @@ An end-to-end digit recognition project combining Python and a browser drawing i
 | Project | Description |
 |---|---|
 | `EDA_GDP/life_expectancy_gdp.ipynb` | GDP and life expectancy exploratory data analysis |
+
+#### Pipeline
+
+| Project | Description |
+|---|---|
+| `Pipeline/bone_marrow.ipynb` | End-to-end scikit-learn Pipeline for bone marrow transplant outcome prediction using `.arff` data — covers preprocessing, encoding, and model evaluation in a single pipeline |
+
+#### Neural Networks
+
+| Project | Description |
+|---|---|
+| `Neural Networks/neural.ipynb` | Neural network fundamentals — architecture, forward pass, activation functions, and training concepts |
+| `Neural Networks/Life_Expectancy/life.ipynb` | Neural network regression on life expectancy data — feature preprocessing, model training, and evaluation |
 
 ---
 
