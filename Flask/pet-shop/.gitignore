@@ -1,0 +1,6 @@
+# Virtual environment directories (created by python -m venv)
+Include/
+Lib/
+Scripts/
+__pycache__/
+pyvenv.cfg

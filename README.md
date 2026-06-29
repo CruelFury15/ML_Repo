@@ -1,6 +1,6 @@
 ﻿# Machine Learning Projects Collection
 
-A hands-on collection of ML projects, Jupyter notebooks, and datasets covering supervised and unsupervised learning, neural networks, dimensionality reduction, feature selection, ensemble methods, and exploratory data analysis. This repository is maintained as a learning archive and growing portfolio.
+A hands-on collection of ML and web projects, Jupyter notebooks, and datasets covering supervised and unsupervised learning, neural networks, CNNs, dimensionality reduction, feature selection, ensemble methods, exploratory data analysis, and Flask web development. This repository is maintained as a learning archive and growing portfolio.
 
 ---
 
@@ -29,6 +29,8 @@ A hands-on collection of ML projects, Jupyter notebooks, and datasets covering s
     - [Pipeline](#pipeline)
     - [Neural Networks](#neural-networks)
     - [Classification with TensorFlow](#classification-with-tensorflow)
+    - [Convolutional Neural Networks (CNN)](#convolutional-neural-networks-cnn)
+    - [Flask Web Applications](#flask-web-applications)
 - [Getting Started](#getting-started)
 - [Dependencies](#dependencies)
 - [Notes](#notes)
@@ -96,6 +98,10 @@ ML_Repo/
 │       ├── graph.py
 │   │       ├── svm.ipynb
 │   │       └── svm_scikit.ipynb
+├── CNN/
+│   ├── galaxy.ipynb
+│   ├── app.py
+│   └── visualize.py
 ├── Classification_Tensorflow/
 │   ├── heart.ipynb
 │   └── heart_failure.csv
@@ -111,6 +117,17 @@ ML_Repo/
 │   └── Random_forest_Project/
 │       ├── adult.data
 │       └── adult.ipynb
+├── Flask/
+│   ├── first_flask_app.py
+│   ├── pet-shop/
+│   │   ├── app.py
+│   │   └── helper.py
+│   └── tourist-attractions-app/
+│       ├── app.py
+│       ├── forms.py
+│       ├── locations.py
+│       ├── data.csv
+│       └── templates/
 ├── Handwriting Recognition/
 │   ├── index.html
 │   ├── JsCode.js
@@ -312,6 +329,22 @@ An end-to-end digit recognition project combining Python and a browser drawing i
 |---|---|
 | `Classification_Tensorflow/heart.ipynb` | Binary classification of heart failure outcomes using TensorFlow/Keras — covers data preprocessing, model building, training, and evaluation on clinical data |
 
+#### Convolutional Neural Networks (CNN)
+
+| Project | Description |
+|---|---|
+| `CNN/galaxy.ipynb` | CNN-based galaxy morphology classification — image preprocessing, convolutional architecture design, training, and visualisation of learned features |
+| `CNN/visualize.py` | Helper script for visualising CNN layer activations and feature maps |
+| `CNN/app.py` | Application script for running CNN inference |
+
+#### Flask Web Applications
+
+| Project | Description |
+|---|---|
+| `Flask/first_flask_app.py` | Introductory Flask app — routing, templates, and request handling basics |
+| `Flask/pet-shop/app.py` | Pet shop Flask app with helper utilities |
+| `Flask/tourist-attractions-app/app.py` | Tourist attractions CRUD app with form handling, data model, and Jinja2 templates |
+
 ---
 
 ## Getting Started
@@ -331,6 +364,8 @@ An end-to-end digit recognition project combining Python and a browser drawing i
 - matplotlib
 - seaborn
 - scipy
+- tensorflow / keras
+- flask
 
 > Some notebooks may require additional packages; inspect notebook metadata or individual imports.
 

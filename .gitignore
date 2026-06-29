@@ -1,0 +1,56 @@
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
+# ── Virtual environments ───────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+# venv folders created by `python -m venv` inside project sub-dirs
+Include/
+Lib/
+Scripts/
+pyvenv.cfg
+
+# ── Jupyter ────────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# ── Distribution / build ───────────────────────────────────────────────────────
+dist/
+build/
+*.egg-info/
+*.egg
+
+# ── OS artefacts ──────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDE / editor ──────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── Compiled model artefacts (large binary files) ─────────────────────────────
+*.h5
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.joblib
+
+# ── Logs & temp ───────────────────────────────────────────────────────────────
+*.log
+*.tmp
+*.bak
+
+# ── Secrets / environment variables ──────────────────────────────────────────
+.env
+.env.*
+secrets.py
