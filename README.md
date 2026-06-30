@@ -1,6 +1,8 @@
-﻿# Machine Learning Projects Collection
+﻿# Machine Learning & Web Development Projects
 
-A hands-on collection of ML and web projects, Jupyter notebooks, and datasets covering supervised and unsupervised learning, neural networks, CNNs, dimensionality reduction, feature selection, ensemble methods, exploratory data analysis, and Flask web development. This repository is maintained as a learning archive and growing portfolio.
+A hands-on collection of ML and web projects, Jupyter notebooks, and datasets covering supervised and unsupervised learning, neural networks, CNNs, dimensionality reduction, feature selection, ensemble methods, exploratory data analysis, and Flask web development.
+
+> 📚 **Learning Credit:** The majority of projects and exercises in this repository are based on courses and guided projects from [Codecademy](https://www.codecademy.com). All credit for curriculum design, datasets, and project structure goes to Codecademy. This repository serves as a personal learning archive and portfolio built while completing their Data Science, Machine Learning, and Web Development paths.
 
 ---
 
@@ -96,8 +98,8 @@ ML_Repo/
 │   │       └── email.ipynb
 │   └── SVM/
 │       ├── graph.py
-│   │       ├── svm.ipynb
-│   │       └── svm_scikit.ipynb
+│       ├── svm.ipynb
+│       └── svm_scikit.ipynb
 ├── CNN/
 │   ├── galaxy.ipynb
 │   ├── app.py
@@ -119,6 +121,10 @@ ML_Repo/
 │       └── adult.ipynb
 ├── Flask/
 │   ├── first_flask_app.py
+│   ├── Flask-SQLAlchemy/
+│   │   ├── app.py
+│   │   ├── create_object.py
+│   │   └── README.md
 │   ├── pet-shop/
 │   │   ├── app.py
 │   │   └── helper.py
@@ -128,6 +134,8 @@ ML_Repo/
 │       ├── locations.py
 │       ├── data.csv
 │       └── templates/
+│           ├── base.html
+│           └── locations.html
 ├── Handwriting Recognition/
 │   ├── index.html
 │   ├── JsCode.js
@@ -185,7 +193,7 @@ ML_Repo/
 | Project | Description |
 |---|---|
 | `Algorithms/LinearRegression/Linear_linregress.ipynb` | Simple linear regression using `scipy.stats.linregress` — covers slope, intercept, R², and t-statistics |
-| `Algorithms/LinearRegression/Linear_manula.ipynb` | Manual gradient descent explanation and implementation from first principles |
+| `Algorithms/LinearRegression/Linear_manula.ipynb` | Manual gradient descent implementation from first principles |
 | `Algorithms/LinearRegression/Linear_scikit.ipynb` | Scikit-learn `LinearRegression` on a toy dataset |
 | `Algorithms/LinearRegression/AgevBP/BPvAge.ipynb` | Predicts blood pressure from age using synthetic data |
 | `Algorithms/LinearRegression/HoneyProduction/honey.ipynb` | Forecasts US honey production trends with time series aggregation |
@@ -206,7 +214,6 @@ ML_Repo/
 
 | Project | Description |
 |---|---|
-| `K-NearestNeighbour/movies_manual.ipynb` | KNN from scratch with distance functions and validation accuracy |
 | `Algorithms/K-NearestNeighbour/movies.ipynb` | Movie dataset KNN examples and helper dataset utilities |
 | `Algorithms/K-NearestNeighbour/movies_classifier.ipynb` | KNN classification of movie audience score |
 | `Algorithms/K-NearestNeighbour/movies_regressor.ipynb` | KNN regression for continuous movie rating prediction |
@@ -231,14 +238,16 @@ ML_Repo/
 | Project | Description |
 |---|---|
 | `Algorithms/Naive Bayes Classifier/bayes.ipynb` | Naive Bayes classification concepts and examples |
-| `Algorithms/Naive Bayes Classifier/Email Similarity/email.ipynb` | Email similarity classification using naive Bayes techniques |
+| `Algorithms/Naive Bayes Classifier/Email Similarity/email.ipynb` | Email similarity classification using Naive Bayes |
 
 #### Support Vector Machines (SVM)
 
 | Project | Description |
 |---|---|
 | `Algorithms/SVM/svm.ipynb` | SVM fundamentals and margin visualisation |
-| `Algorithms/SVM/svm_scikit.ipynb` | Scikit-learn SVC examples with linear, polynomial, and RBF kernels |
+| `Algorithms/SVM/svm_scikit.ipynb` | Scikit-learn SVC with linear, polynomial, and RBF kernels |
+
+---
 
 ### Additional Topics
 
@@ -289,51 +298,52 @@ ML_Repo/
 
 #### Handwriting Recognition
 
-An end-to-end digit recognition project combining Python and a browser drawing interface.
+An end-to-end digit recognition project combining a Python ML backend with a browser-based drawing interface.
 
-- `Handwriting Recognition/script.py`
-- `Handwriting Recognition/index.html`
-- `Handwriting Recognition/JsCode.js`
-- `Handwriting Recognition/requirements.txt`
-- `Handwriting Recognition/test.html`
-- `Handwriting Recognition/outputs/`
+| File | Description |
+|---|---|
+| `Handwriting Recognition/script.py` | Core ML script — trains a digit classifier and serves predictions |
+| `Handwriting Recognition/index.html` | Browser canvas UI for drawing digits |
+| `Handwriting Recognition/JsCode.js` | JavaScript — captures canvas input and calls the backend |
+| `Handwriting Recognition/test.html` | Test page for the drawing interface |
+| `Handwriting Recognition/outputs/` | Saved visualisation images (cluster centres, digit overview, sample) |
 
 #### Recommender System
 
 | Project | Description |
 |---|---|
-| `Recommender System/recommender.ipynb` | Goodreads rating-based recommender system notebook |
+| `Recommender System/recommender.ipynb` | Goodreads rating-based book recommender system |
 
 #### Exploratory Data Analysis — GDP & Life Expectancy
 
 | Project | Description |
 |---|---|
-| `EDA_GDP/life_expectancy_gdp.ipynb` | GDP and life expectancy exploratory data analysis |
+| `EDA_GDP/life_expectancy_gdp.ipynb` | EDA on GDP and life expectancy across countries — visualisation and trend analysis |
 
 #### Pipeline
 
 | Project | Description |
 |---|---|
-| `Pipeline/bone_marrow.ipynb` | End-to-end scikit-learn Pipeline for bone marrow transplant outcome prediction using `.arff` data — covers preprocessing, encoding, and model evaluation in a single pipeline |
+| `Pipeline/bone_marrow.ipynb` | End-to-end scikit-learn Pipeline for bone marrow transplant outcome prediction — preprocessing, encoding, and model evaluation in a single pipeline |
 
 #### Neural Networks
 
 | Project | Description |
 |---|---|
-| `Neural Networks/neural.ipynb` | Neural network fundamentals — architecture, forward pass, activation functions, and training concepts |
-| `Neural Networks/Life_Expectancy/life.ipynb` | Neural network regression on life expectancy data — feature preprocessing, model training, and evaluation |
+| `Neural Networks/neural.ipynb` | Neural network fundamentals — architecture, forward pass, activation functions, and training |
+| `Neural Networks/Life_Expectancy/life.ipynb` | Neural network regression on life expectancy data — feature preprocessing, training, and evaluation |
 
 #### Classification with TensorFlow
 
 | Project | Description |
 |---|---|
-| `Classification_Tensorflow/heart.ipynb` | Binary classification of heart failure outcomes using TensorFlow/Keras — covers data preprocessing, model building, training, and evaluation on clinical data |
+| `Classification_Tensorflow/heart.ipynb` | Binary classification of heart failure outcomes using TensorFlow/Keras — preprocessing, model building, training, and evaluation on clinical data |
 
 #### Convolutional Neural Networks (CNN)
 
 | Project | Description |
 |---|---|
-| `CNN/galaxy.ipynb` | CNN-based galaxy morphology classification — image preprocessing, convolutional architecture design, training, and visualisation of learned features |
+| `CNN/galaxy.ipynb` | CNN-based galaxy morphology classification — image preprocessing, convolutional architecture design, training, and feature visualisation |
 | `CNN/visualize.py` | Helper script for visualising CNN layer activations and feature maps |
 | `CNN/app.py` | Application script for running CNN inference |
 
@@ -344,6 +354,8 @@ An end-to-end digit recognition project combining Python and a browser drawing i
 | `Flask/first_flask_app.py` | Introductory Flask app — routing, templates, and request handling basics |
 | `Flask/pet-shop/app.py` | Pet shop Flask app with helper utilities |
 | `Flask/tourist-attractions-app/app.py` | Tourist attractions CRUD app with form handling, data model, and Jinja2 templates |
+| `Flask/Flask-SQLAlchemy/app.py` | Flask + SQLAlchemy demo — defines `Book`, `Reader`, `Review` models and persists data to SQLite |
+| `Flask/Flask-SQLAlchemy/create_object.py` | Script to insert sample data into the SQLite database |
 
 ---
 
@@ -351,30 +363,49 @@ An end-to-end digit recognition project combining Python and a browser drawing i
 
 1. Install Python 3.10 or newer.
 2. Create and activate a virtual environment.
-3. Install dependencies for notebook work using `pip install -r "Handwriting Recognition/requirements.txt"` or install packages used by your selected notebook(s).
-4. Launch Jupyter Notebook or JupyterLab from the repository root.
+3. Install dependencies for notebook work:
+   ```bash
+   pip install jupyter scikit-learn pandas numpy matplotlib seaborn scipy tensorflow flask flask_sqlalchemy
+   ```
+   Or for the Handwriting Recognition project specifically:
+   ```bash
+   pip install -r "Handwriting Recognition/requirements.txt"
+   ```
+4. Launch Jupyter Notebook or JupyterLab from the repository root:
+   ```bash
+   jupyter lab
+   ```
+
+---
 
 ## Dependencies
 
-- Python 3.10+
-- Jupyter Notebook / JupyterLab
-- scikit-learn
-- pandas
-- numpy
-- matplotlib
-- seaborn
-- scipy
-- tensorflow / keras
-- flask
+| Package | Used in |
+|---|---|
+| `scikit-learn` | Most ML algorithm notebooks |
+| `pandas` | Data loading and manipulation throughout |
+| `numpy` | Numerical computation throughout |
+| `matplotlib` | Visualisation throughout |
+| `seaborn` | Statistical visualisation |
+| `scipy` | Linear regression, statistics |
+| `tensorflow` / `keras` | Neural Networks, Classification, CNN |
+| `flask` | All Flask web app projects |
+| `flask_sqlalchemy` | Flask-SQLAlchemy project |
+| `jupyter` | All `.ipynb` notebooks |
 
-> Some notebooks may require additional packages; inspect notebook metadata or individual imports.
+> Some notebooks may require additional packages. Check individual notebook imports or the folder's `requirements.txt` if present.
+
+---
 
 ## Notes
 
-- This repository is intended primarily as an educational collection. Code notebooks demonstrate algorithms, dataset exploration, and model evaluation.
-- Folder names and notebook names are preserved from the original project structure.
-- Some datasets are stored alongside notebooks to support local execution.
+- Projects are primarily based on [Codecademy](https://www.codecademy.com) courses — see the learning credit note at the top.
+- Folder and notebook names are preserved from their original project structure.
+- Datasets are stored alongside notebooks to support local execution.
+- Virtual environment directories (`Include/`, `Lib/`, `Scripts/`) are excluded from version control via `.gitignore`.
+
+---
 
 ## License
 
-No license is specified for this repository at this time.
+No license is specified for this repository at this time. All Codecademy course materials and datasets remain the intellectual property of [Codecademy](https://www.codecademy.com).
