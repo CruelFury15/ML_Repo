@@ -33,6 +33,8 @@ A hands-on collection of ML and web projects, Jupyter notebooks, and datasets co
     - [Classification with TensorFlow](#classification-with-tensorflow)
     - [Convolutional Neural Networks (CNN)](#convolutional-neural-networks-cnn)
     - [Flask Web Applications](#flask-web-applications)
+      - [To-Do App](#to-do-app)
+      - [TriPlanned (Travel Site)](#triplanned-travel-site)
 - [Getting Started](#getting-started)
 - [Dependencies](#dependencies)
 - [Notes](#notes)
@@ -128,14 +130,31 @@ ML_Repo/
 │   ├── pet-shop/
 │   │   ├── app.py
 │   │   └── helper.py
-│   └── tourist-attractions-app/
+│   ├── tourist-attractions-app/
+│   │   ├── app.py
+│   │   ├── forms.py
+│   │   ├── locations.py
+│   │   ├── data.csv
+│   │   └── templates/
+│   │       ├── base.html
+│   │       └── locations.html
+│   ├── To-Do_App/
+│   │   ├── app.py
+│   │   ├── create_todos.py
+│   │   └── templates/
+│   └── Travel_Site/
 │       ├── app.py
+│       ├── extensions.py
+│       ├── models.py
+│       ├── routes.py
 │       ├── forms.py
-│       ├── locations.py
-│       ├── data.csv
+│       ├── README.md
 │       └── templates/
 │           ├── base.html
-│           └── locations.html
+│           ├── landing_page.html
+│           ├── login.html
+│           ├── register.html
+│           └── user.html
 ├── Handwriting Recognition/
 │   ├── index.html
 │   ├── JsCode.js
@@ -356,6 +375,8 @@ An end-to-end digit recognition project combining a Python ML backend with a bro
 | `Flask/tourist-attractions-app/app.py` | Tourist attractions CRUD app with form handling, data model, and Jinja2 templates |
 | `Flask/Flask-SQLAlchemy/app.py` | Flask + SQLAlchemy demo — defines `Book`, `Reader`, `Review` models and persists data to SQLite |
 | `Flask/Flask-SQLAlchemy/create_object.py` | Script to insert sample data into the SQLite database |
+| `Flask/To-Do_App/app.py` | To-do list app with Flask-WTF form, SQLAlchemy-backed `Todo` model, and persistent task storage |
+| `Flask/Travel_Site/` | **TriPlanned** — full-featured travel planning app with user registration, login, session management, and per-user trip posts. See [`Flask/Travel_Site/README.md`](Flask/Travel_Site/README.md) for setup and details |
 
 ---
 
@@ -390,7 +411,10 @@ An end-to-end digit recognition project combining a Python ML backend with a bro
 | `scipy` | Linear regression, statistics |
 | `tensorflow` / `keras` | Neural Networks, Classification, CNN |
 | `flask` | All Flask web app projects |
-| `flask_sqlalchemy` | Flask-SQLAlchemy project |
+| `flask_sqlalchemy` | Flask-SQLAlchemy project, To-Do App, Travel Site |
+| `flask-login` | Travel Site — session and authentication management |
+| `flask-wtf` / `wtforms` | Travel Site, To-Do App — form handling and validation |
+| `email-validator` | Travel Site — email field validation |
 | `jupyter` | All `.ipynb` notebooks |
 
 > Some notebooks may require additional packages. Check individual notebook imports or the folder's `requirements.txt` if present.
